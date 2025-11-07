@@ -65,9 +65,10 @@ def extract_movies(soup):
 def main():
     start_time = time.time()
 
-    # IMDB Most Popular Movies - 100 movies
+
     popular_movies_url = 'https://www.imdb.com/chart/moviemeter/?ref_=nv_mv_mpm'
     response = requests.get(popular_movies_url, headers=headers)
+
     soup = BeautifulSoup(response.content, 'html.parser')
 
     # Main function to extract the 100 movies from IMDB Most Popular Movies
